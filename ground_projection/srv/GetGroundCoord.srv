@@ -1,0 +1,6 @@
+# image coordinate whose origin is the upper left corner of the image
+# turtlebot3_auto_msgs/Pixel uv
+turtlebot3_auto_msgs/Vector2D normalized_uv
+---
+# ground plane cooridnate whose origin is the center of the robot
+geometry_msgs/Point gp
