@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package>
+  <name>turtlebot3_auto_motor</name>
+  <version>0.0.0</version>
+  <description>The turtlebot3_auto_motor package</description>
+  <maintainer email="leon@todo.todo">leon</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export> </export>
+</package>

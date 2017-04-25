@@ -172,19 +172,16 @@ private:
   {
     cv::Point3f pt_img(static_cast<float>(pixel.u), static_cast<float>(pixel.v), 1.f);
 
-    // if(!rectified_input_)
-    // {
-    //
-    //       ROS_INFO("FOR DEBUG: g2i 2");
-    //   // point-wise undistortion
-    //   cv::Point2d pt_undistorted = pcm_.rectifyPoint(
-    //     cv::Point2d(static_cast<double>(pt_img.x), static_cast<double>(pt_img.y))
-    //   );
-    //   ROS_INFO("FOR DEBUG: ri");
-    //
-    //   pt_img.x = static_cast<float>(pt_undistorted.x);
-    //   pt_img.y = static_cast<float>(pt_undistorted.y);
-    // }
+    if(!rectified_input_)
+    {
+      // point-wise undistortion
+      cv::Point2d pt_undistorted = pcm_.rectifyPoint(
+        cv::Point2d(static_cast<double>(pt_img.x), static_cast<double>(pt_img.y))
+      );
+
+      pt_img.x = static_cast<float>(pt_undistorted.x);
+      pt_img.y = static_cast<float>(pt_undistorted.y);
+    }
 
     // ROS_INFO("FOR DEBUG: Mat");
 

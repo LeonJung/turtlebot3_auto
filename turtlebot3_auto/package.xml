@@ -13,6 +13,8 @@
   <url type="website">http://wiki.ros.org/turtlebot3_auto</url>
   <buildtool_depend>catkin</buildtool_depend>
   <run_depend>turtlebot3_auto_msgs</run_depend>
+  <run_depend>turtlebot3_auto_sensor</run_depend>
+  <run_depend>turtlebot3_auto_motor</run_depend>
   <run_depend>anti_instagram</run_depend>
   <run_depend>line_detector</run_depend>
   <run_depend>ground_projection</run_depend>

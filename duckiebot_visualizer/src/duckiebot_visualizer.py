@@ -12,11 +12,11 @@ class DuckieBotVisualizer(object):
         rospy.loginfo("[%s] Initialzing." %(self.node_name))
 
         # Read parameters
-        self.veh_name = self.setupParameter("~veh_name","alphaduck")
+        self.veh_name = self.setupParameter("veh_name","alphaduck")
 
         # Setup publishers
         # self.pub_timestep = self.setupParameter("~pub_timestep",1.0)
-        self.pub_seg_list = rospy.Publisher("~segment_list_markers",MarkerArray,queue_size=1)
+        self.pub_seg_list = rospy.Publisher("segment_list_markers",MarkerArray,queue_size=1)
 
         # Create a timer that calls the cbTimer function every 1.0 second
         # self.timer = rospy.Timer(rospy.Duration.from_sec(self.pub_timestep),self.cbTimer)
